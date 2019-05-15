@@ -116,12 +116,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AddPatient.cpp" />
+    <ClCompile Include="Autoryz.cpp" />
     <ClCompile Include="Menyu.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Viewpatient.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AddPatient.h" />
+    <ClInclude Include="Autoryz.h" />
     <ClInclude Include="Menyu.h" />
+    <ClInclude Include="Viewpatient.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

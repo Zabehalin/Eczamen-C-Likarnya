@@ -1,6 +1,0 @@
-Name: Sasha
-SurName: Zabehalin
-Age: 17
-Phone: +380966645657
-Doctor: Casperscoy
-Chamber: 13

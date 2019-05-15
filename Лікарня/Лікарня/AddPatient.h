@@ -1,2 +1,2 @@
 #pragma once
-void AddPatient();
+void AddPatient(int v);

@@ -5,46 +5,81 @@
 using namespace std;
 struct Person
 {
-	string name;
-	string surname;
-	unsigned short age;
-	string Phone;
+	string Name;
+	string SyrName;
+	string PoName;
+	string Age;
+	string age;
+	string Date;
+	string Time;
 	string Doctor;
+	string Diagnosis;
+	string Medicine;
 	int Chamber;
-	void ShowPerson()
-	{
-		system("cls");
-		cout << "Name: " << name << "\nSurname: " << surname << "\nAge: " << age << "\nPhone number: " << Phone << "\nDoctor: " << Doctor << "\nChamber: " << Chamber << endl;
-	}
+	double Payment;
 
 };
 void FillPerson(Person person,string Path)
 {
 	ofstream WriteFile;
-	cout << "Name: ";
-	cin >> person.name;
-	cout << "SurName: ";
-	cin >> person.surname;
-	cout << "Age: ";
-	cin >> person.age;
-	cout << "Phone number: ";
-	cin >> person.Phone;
+	cout << "Date: ";
+	cin >> person.Date;
+	cout << "Time: ";
+	cin >> person.Time;
 	cout << "Doctor: ";
 	cin >> person.Doctor;
+	cout << "Diagnosis: ";
+	cin >> person.Diagnosis;
+	cout << "Medicine: ";
+	cin >> person.Medicine;
 	cout << "Chamber: ";
 	cin >> person.Chamber;
+	cout << "Payment: ";
+	cin >> person.Payment;
 	WriteFile.open(Path, ofstream::app);
-	WriteFile << "Name: " << person.name << "\nSurName: " << person.surname <<"\nAge: "<< person.age << "\nPhone: " << person.Phone << "\nDoctor: " << person.Doctor<<"\nChamber: "<< person.Chamber << endl;
+	WriteFile << "====================================================" << endl;
+	WriteFile << "Date: " << person.Date << "\tTime: " << person.Time << "\tPayment: " << person.Payment<<"\n====================================================" << "\n\nDoctor: "<< person.Doctor << "\n\nDiagnosis: " << person.Diagnosis << "\n\nMedicine: " << person.Medicine <<"\n\nChamber: "<< person.Chamber <<  endl;
 	WriteFile.close();
 
 }
 
-void AddPatient()
+void AddPatient(int v)
 {
 	ifstream ReadFile;
-	string Path = "User.txt";
 	Person person;
-	FillPerson(person, Path);
+	cout << "Name: ";
+	cin >> person.Name;
+	cout << "SyrName: ";
+	cin >> person.SyrName;
+	cout << "PoBatcovi: ";
+	cin >> person.PoName;
+	string Path;
+	Path += person.Name;
+	Path += "_";
+	Path += person.SyrName;
+	Path += "_";
+	Path += person.PoName;
+	Path += ".txt";
+	if (v == 0)
+	{
+		FillPerson(person, Path);
+	}
+	else if (v > 0)
+	{
+		ofstream File;
+		File.open(Path, ios_base::app);
+		ofstream WriteFile;
+		cout << "Age: ";
+		cin >> person.Age;
+		WriteFile.open(Path, ofstream::app);
+		WriteFile << "====================================================" << endl;
+		WriteFile << "Name: " << person.Name << "\tSyrName: " << person.SyrName << "\nPoBatcovi: " << person.PoName << "\tAge: " << person.Age << endl;
+		WriteFile << "====================================================" << endl;
 
-	//system("pause");
+
+		FillPerson(person, Path);
+		File.close();
+	}
+	
+
 }

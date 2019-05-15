@@ -24,12 +24,24 @@
     <ClCompile Include="AddPatient.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Autoryz.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewpatient.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Menyu.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="AddPatient.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Autoryz.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewpatient.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
